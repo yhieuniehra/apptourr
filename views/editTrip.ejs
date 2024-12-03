@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chỉnh Sửa Tour Du Lịch</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Chỉnh Sửa Tour Du Lịch</h1>
+    
+    <!-- Form để chỉnh sửa tour du lịch -->
+    <form action="/trips/update/<%= trip._id %>" method="POST">
+        <label for="name">Tên Tour Du Lịch:</label>
+        <input type="text" id="name" name="name" value="<%= trip.name %>" required><br><br>
+
+        <label for="description">Mô Tả Tour:</label>
+        <textarea id="description" name="description" rows="4" required><%= trip.description %></textarea><br><br>
+
+        <label for="destination">Điểm Đến:</label>
+        <input type="text" id="destination" name="destination" value="<%= trip.destination %>" required><br><br>
+
+        <label for="departureTime">Ngày Giờ Khởi Hành:</label>
+        <input type="datetime-local" id="departureTime" name="departureTime" value="<%= new Date(trip.departureTime).toISOString().slice(0, 16) %>" required><br><br>
+
+        <button type="submit">Cập Nhật Tour</button>
+    </form>
+</body>
+</html>

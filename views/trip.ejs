@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách Chuyến Tàu</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .delete-btn {
+            background-color: #f44336;
+        }
+
+        .delete-btn:hover {
+            background-color: #e53935;
+        }
+    </style>
+</head>
+<body>
+    <h1>Danh sách Tour Du Lịch</h1>
+
+    <div class="button-group">
+        <a href="/trips/add"><button>Thêm Tour Du Lịch</button></a>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tên Tour Du Lịch</th>
+                <th>Mô Tả Tour</th>
+                <th>Điểm Đến</th>
+                <th>Ngày Giờ Khởi Hành</th>
+                <th>Thao Tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% trips.forEach(function(trip) { %>
+                <tr>
+                    <td><%= trip.name %></td>
+                    <td><%= trip.from %></td>
+                    <td><%= trip.to %></td>
+                    <td><%= trip.departureTime %></td>
+                    <td>
+                        <a href="/trips/edit/<%= trip._id %>"><button>Sửa</button></a>
+                        <form action="/trips/delete/<%= trip._id %>" method="POST" style="display:inline;">
+                            <button type="submit" class="delete-btn">Xóa</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>

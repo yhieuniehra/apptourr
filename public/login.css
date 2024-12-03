@@ -1,0 +1,125 @@
+/* Tổng quan trang */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Box chứa nội dung */
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Tiêu đề */
+h1 {
+    font-size: 24px;
+    text-align: center;
+    color: #4c4f69;
+}
+
+h2 {
+    font-size: 20px;
+    text-align: center;
+    color: #3a3d55;
+}
+
+/* Nhóm input */
+.input-group {
+    margin-bottom: 15px;
+    width: 95%;
+}
+
+/* Label cho input */
+.input-group label {
+    font-size: 14px;
+    color: #5d5f73;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Input */
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #d1d8e0;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+/* Khi focus vào input */
+.input-group input:focus {
+    border-color: #4c9aff;
+}
+
+/* Nút đăng nhập */
+.login-btn {
+    background-color: #4c9aff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Nút đăng nhập khi hover */
+.login-btn:hover {
+    background-color: #3a8fdf;
+}
+
+/* Phần đăng nhập bằng mạng xã hội */
+.social-login {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-login p {
+    font-size: 14px;
+    color: #5d5f73;
+}
+
+.social-icons button {
+    background: #f1f1f1;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Nút mạng xã hội khi hover */
+.social-icons button:hover {
+    background-color: #e2e6ea;
+}
+
+/* Liên kết đăng ký */
+.sign-in-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.sign-in-link a {
+    color: #4c9aff;
+    text-decoration: none;
+}
+
+/* Liên kết đăng ký khi hover */
+.sign-in-link a:hover {
+    text-decoration: underline;
+}

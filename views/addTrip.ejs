@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm Tour Du Lịch</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Thêm Tour Du Lịch</h1>
+    <form action="/tours/add" method="POST">
+        <label for="name">Tên Tour Du Lịch:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="description">Mô Tả Tour:</label>
+        <textarea id="description" name="description" rows="4" required></textarea><br><br>
+
+        <label for="destination">Điểm Đến:</label>
+        <input type="text" id="destination" name="destination" required><br><br>
+
+        <label for="departureTime">Ngày Giờ Khởi Hành:</label>
+        <input type="datetime-local" id="departureTime" name="departureTime" required><br><br>
+
+        <button type="submit">Thêm Tour</button>
+    </form>
+</body>
+</html>
